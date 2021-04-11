@@ -1,0 +1,15 @@
+/.bash_history
+/.bash_logout
+/.bashrc
+/.cache
+/.config
+/.local
+/.node-red
+/.npm
+/.npmrc
+/.profile
+/.sudo_as_admin_successful
+/.vscode-server
+/.wget-hsts
+/node_modules
+/package-lock.json

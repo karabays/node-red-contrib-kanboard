@@ -1,0 +1,16 @@
+{
+  "name": "node-red-contrib-kanboard",
+  "node-red" : {
+    "nodes": {
+        "kanboard": "kanboard.js"
+    }
+},
+  "version": "0.0.1",
+  "description": "Kanboad api wrapper for nodered",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
