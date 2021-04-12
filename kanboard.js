@@ -51,9 +51,9 @@ module.exports = function(RED) {
                         this.status({})
                     })
                     .catch(error => {
+                        this.status({ fill: "red", shape: "dot", text: "error" });
                         msg.payload = error.response.data;
-                        node.send(msg)
-                        this.status({ fill: "red", shape: "dot", text: "error" })
+                        node.send(msg);
                     });
             });
         }

@@ -1,16 +1,30 @@
 {
-  "name": "node-red-contrib-kanboard",
-  "node-red" : {
-    "nodes": {
-        "kanboard": "kanboard.js"
-    }
-},
-  "version": "0.0.1",
-  "description": "Kanboad api wrapper for nodered",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "node-red-contrib-kanboard",
+    "node-red": {
+        "nodes": {
+            "kanboard": "kanboard.js"
+        }
+    },
+    "keywords": [
+        "node-red",
+        "kanboard",
+        "kanban"
+    ],
+    "version": "0.0.1",
+    "description": "Simple Kanboard api wrapper for nodered.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Serkan Karabay",
+    "license": "ISC",
+    "dependencies": { "axios": "^0.21.1" },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/karabays/node-red-contrib-kanboard.git"
+    },
+    "bugs": {
+        "url": "https://github.com/karabays/node-red-contrib-kanboard/issues"
+    },
+    "homepage": "https://github.com/karabays/node-red-contrib-kanboard"
 }
