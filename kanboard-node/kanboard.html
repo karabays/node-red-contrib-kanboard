@@ -1,0 +1,109 @@
+<!-- Credentials node starts -->
+<script type="text/javascript">
+    RED.nodes.registerType('kanboard-server', {
+        category: 'config',
+        defaults: {
+            url: {
+                value: "",
+                required: true
+            },
+            name: {
+                value: "My Kanboard",
+                required: false
+            }
+        },
+        credentials: {
+            username: {
+                type: "text"
+            },
+            apipass: {
+                type: "password"
+            }
+        },
+        label: function() {
+            return this.name;
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="kanboard-server">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="fa fa-label"></i> Server Name</label>
+        <input type="text" id="node-config-input-name">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-url"><i class="fa fa-globe"></i> Server URL</label>
+        <input type="text" id="node-config-input-url">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-username"><i class="fa fa-user"></i> Username</label>
+        <input type="text" id="node-config-input-username">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-apipass"><i class="fa fa-key"></i> Api Password</label>
+        <input type="password" id="node-config-input-apipass">
+    </div>
+</script>
+
+
+<!-- Credentials node ends -->
+
+<!-- Kanboard node starts -->
+<script type="text/javascript">
+    RED.nodes.registerType('kanboard', {
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {
+                value: ""
+            },
+            server: {
+                value: "",
+                type: "kanboard-server"
+            },
+            method: {
+                value: "",
+                required: false
+            },
+            params: {
+                value: "{}"
+            }
+        },
+        oneditprepare: function() {
+            $("#node-input-params").typedInput({
+                type: "json",
+                types: ["json"]
+            });
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "kanboard.png",
+        label: function() {
+            return this.name || "kanboard";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="kanboard">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-server"><i class="fa fa-user"></i> Server</label>
+        <input type="text" id="node-input-server" placeholder="Server">
+    </div>
+    <div class="form-row">
+        <label for="node-input-method"><i class="fa fa-cube"></i> Method</label>
+        <input type="text" id="node-input-method" placeholder="Method">
+    </div>
+    <div class="form-row">
+        <label for="node-input-params"><i class="fa fa-cog"></i> Params</label>
+        <input type="text" id="node-input-params" placeholder="Params">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="kanboard">
+    <p>A simple node to make Kanboard Api calls. </p>
+</script>
+<!-- Kanboard node ends -->
