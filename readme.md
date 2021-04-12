@@ -6,7 +6,7 @@ Kanboard api wrapper for node-red. Make simple api calls to kanboard server. Mor
 
 API endpoint: The url shown in your server's settings page. Usually something like `https://YOUR_SERVER/jsonrpc.php`
 
-Tested for user credentials so use your username and your personal api token. But it will also work for application credentials filled according to apir documentation.
+Tested for user credentials so use your username and your personal api token. But it will also work for application credentials filled according to api documentation.
 
 ## Kanboard Node
 
