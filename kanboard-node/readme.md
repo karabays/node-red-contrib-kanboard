@@ -1,1 +1,0 @@
-Kanboard api wrapper for node-red
